@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TrackParcel - Rastreie suas encomendas de diferentes transportadoras em um só lugar. Simples, rápido e inteligente.">
+  <title>TrackParcel | Suas encomendas. Um só lugar.</title>
+
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <img src="assets/logo-icon.png" alt="TrackParcel Logo" class="navbar-logo me-2" width="40" height="40">
+        <span class="brand-text">Track<span class="brand-accent">Parcel</span></span>
+      </a>
+
+      <!-- Botão hamburger (mobile) - abre Offcanvas -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu desktop -->
+      <div class="collapse navbar-collapse" id="navbarDesktop">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#como-funciona">Como funciona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recursos">Recursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rastreamento">Rastreamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-track btn-sm px-3" href="#rastreamento">
+              <i class="bi bi-search me-1"></i> Rastrear encomenda
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Menu (mobile) -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasNavLabel">
+        <img src="assets/logo-icon.png" alt="TrackParcel" width="32" height="32" class="me-2">
+        TrackParcel
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link py-3" href="#inicio" data-bs-dismiss="offcanvas">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-3" href="#como-funciona" data-bs-dismiss="offcanvas">Como funciona</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-3" href="#recursos" data-bs-dismiss="offcanvas">Recursos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-3" href="#rastreamento" data-bs-dismiss="offcanvas">Rastreamento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-3" href="#faq" data-bs-dismiss="offcanvas">FAQ</a>
+        </li>
+        <li class="nav-item mt-3">
+          <a class="btn btn-track w-100" href="#rastreamento" data-bs-dismiss="offcanvas">
+            <i class="bi bi-search me-1"></i> Rastrear encomenda
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="inicio" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="hero-badge mb-3">
+              <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis px-3 py-2">
+                <i class="bi bi-lightning-charge-fill me-1"></i> Rastreamento inteligente
+              </span>
+            </div>
+            <h1 class="hero-title display-4 fw-bold mb-3">
+              Suas encomendas.<br>
+              <span class="text-gradient">Um só lugar.</span>
+            </h1>
+            <p class="hero-subtitle lead text-muted mb-4">
+              Rastreie seus pedidos de diferentes transportadoras de forma simples, rápida e inteligente.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#rastreamento" class="btn btn-track btn-lg px-4">
+                <i class="bi bi-search me-2"></i>Rastrear encomenda
+              </a>
+              <a href="#como-funciona" class="btn btn-outline-track btn-lg px-4">
+                Como funciona
+              </a>
+            </div>
+            <div class="hero-stats mt-5 d-flex flex-wrap gap-4">
+              <div class="stat-item">
+                <span class="stat-number">+50</span>
+                <span class="stat-label">Transportadoras</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Acompanhamento</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Gratuito*</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card de demonstração do rastreamento -->
+          <div class="col-lg-6">
+            <div class="tracking-demo-card card border-0 shadow-lg">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <span class="badge bg-success-subtle text-success-emphasis mb-2">
+                      <i class="bi bi-truck me-1"></i> Em trânsito
+                    </span>
+                    <h5 class="card-title mb-0 fw-semibold">PEDIDO #TRK20260925</h5>
+                  </div>
+                  <img src="assets/logo-icon.png" alt="TrackParcel" width="36" height="36">
+                </div>
+
+                <div class="row g-3 mb-4">
+                  <div class="col-6">
+                    <small class="text-muted d-block">Origem</small>
+                    <span class="fw-medium"><i class="bi bi-geo-alt text-primary me-1"></i>São Paulo - SP</span>
+                  </div>
+                  <div class="col-6">
+                    <small class="text-muted d-block">Destino</small>
+                    <span class="fw-medium"><i class="bi bi-geo-alt-fill text-primary me-1"></i>Rio de Janeiro - RJ</span>
+                  </div>
+                </div>
+
+                <div class="mb-2 d-flex justify-content-between">
+                  <small class="text-muted">Progresso da entrega</small>
+                  <small class="fw-medium text-primary">65%</small>
+                </div>
+                <div class="progress mb-3" style="height: 8px;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 65%"></div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <small class="text-muted d-block">Previsão de entrega</small>
+                    <span class="fw-semibold"><i class="bi bi-calendar-check me-1"></i>28 de setembro</span>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#trackingModal" onclick="showDemoTracking()">
+                    Ver detalhes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-shape"></div>
+    </section>
+
+    <!-- ==================== COMO FUNCIONA ==================== -->
+    <section id="como-funciona" class="section-padding bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-badge">Como funciona</span>
+          <h2 class="section-title">Simples em 4 passos</h2>
+          <p class="section-subtitle text-muted mx-auto">Acompanhe suas encomendas sem complicação. Do código ao status atual em segundos.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="step-card card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="step-icon mb-3">
+                  <i class="bi bi-1-circle-fill"></i>
+                </div>
+                <div class="step-icon-main mb-3">
+                  <i class="bi bi-upc-scan"></i>
+                </div>
+                <h5 class="card-title">Insira seu código</h5>
+                <p class="card-text text-muted small">Digite o código de rastreamento da sua encomenda no campo indicado.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="step-card card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="step-icon mb-3">
+                  <i class="bi bi-2-circle-fill"></i>
+                </div>
+                <div class="step-icon-main mb-3">
+                  <i class="bi bi-search"></i>
+                </div>
+                <h5 class="card-title">Identificamos a encomenda</h5>
+                <p class="card-text text-muted small">O TrackParcel localiza automaticamente a transportadora e o status atual.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="step-card card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="step-icon mb-3">
+                  <i class="bi bi-3-circle-fill"></i>
+                </div>
+                <div class="step-icon-main mb-3">
+                  <i class="bi bi-geo"></i>
+                </div>
+                <h5 class="card-title">Acompanhe o percurso</h5>
+                <p class="card-text text-muted small">Visualize cada etapa da jornada da sua encomenda em tempo real.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="step-card card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="step-icon mb-3">
+                  <i class="bi bi-4-circle-fill"></i>
+                </div>
+                <div class="step-icon-main mb-3">
+                  <i class="bi bi-bell"></i>
+                </div>
+                <h5 class="card-title">Receba atualizações</h5>
+                <p class="card-text text-muted small">Fique por dentro de cada mudança de status com alertas em tempo real.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RASTREAMENTO ==================== -->
+    <section id="rastreamento" class="section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center mb-5">
+              <span class="section-badge">Rastreamento</span>
+              <h2 class="section-title">Rastreie sua encomenda</h2>
+              <p class="section-subtitle text-muted">Digite o código de rastreamento e acompanhe o status em tempo real.</p>
+            </div>
+
+            <div class="tracking-form-card card border-0 shadow">
+              <div class="card-body p-4 p-md-5">
+                <form id="trackingForm" novalidate>
+                  <div class="mb-4">
+                    <label for="trackingCode" class="form-label fw-semibold">
+                      <i class="bi bi-upc me-1"></i> Código de rastreamento
+                    </label>
+                    <div class="input-group input-group-lg">
+                      <span class="input-group-text bg-white">
+                        <i class="bi bi-box-seam text-primary"></i>
+                      </span>
+                      <input type="text" class="form-control" id="trackingCode" name="trackingCode"
+                             placeholder="Ex: TRK20260925 ou BR123456789BR"
+                             aria-describedby="trackingHelp" required>
+                    </div>
+                    <div id="trackingHelp" class="form-text">
+                      Aceita códigos de diversas transportadoras (Correios, Jadlog, Total Express, etc.)
+                    </div>
+                    <div class="invalid-feedback">
+                      Por favor, informe um código de rastreamento válido.
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-track btn-lg w-100" id="btnTrack">
+                    <i class="bi bi-search me-2"></i>Rastrear agora
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RASTREIO EM TEMPO REAL ==================== -->
+    <section id="tempo-real" class="section-padding bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-badge">Acompanhamento</span>
+          <h2 class="section-title">Rastreio em tempo real</h2>
+          <p class="section-subtitle text-muted mx-auto">Veja como o TrackParcel organiza o percurso completo da sua encomenda.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="realtime-card card border-0 shadow">
+              <div class="card-header bg-transparent border-0 pt-4 px-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                  <div>
+                    <span class="badge bg-primary-subtle text-primary-emphasis me-2">#TRK20260925</span>
+                    <span class="badge bg-warning-subtle text-warning-emphasis">
+                      <i class="bi bi-truck me-1"></i> Em trânsito
+                    </span>
+                  </div>
+                  <small class="text-muted">Atualizado há 12 min</small>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <!-- Progress bar geral -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="small text-muted">Progresso geral</span>
+                    <span class="small fw-semibold text-primary">65%</span>
+                  </div>
+                  <div class="progress" style="height: 10px;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 65%"></div>
+                  </div>
+                </div>
+
+                <!-- Timeline de etapas -->
+                <div class="tracking-timeline">
+                  <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                      <i class="bi bi-check-lg"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <h6 class="mb-0">Pedido recebido</h6>
+                      <small class="text-muted">São Paulo - SP · 22/09/2026 09:15</small>
+                    </div>
+                  </div>
+                  <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                      <i class="bi bi-check-lg"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <h6 class="mb-0">Processado no centro de distribuição</h6>
+                      <small class="text-muted">São Paulo - SP · 23/09/2026 14:30</small>
+                    </div>
+                  </div>
+                  <div class="timeline-item active">
+                    <div class="timeline-marker">
+                      <i class="bi bi-truck"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <h6 class="mb-0">Em trânsito</h6>
+                      <small class="text-muted">Em rota para Rio de Janeiro - RJ · 25/09/2026 08:00</small>
+                      <span class="badge bg-primary ms-2">Atual</span>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-building"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <h6 class="mb-0 text-muted">Em distribuição</h6>
+                      <small class="text-muted">Aguardando chegada ao centro local</small>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-house-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <h6 class="mb-0 text-muted">Entregue</h6>
+                      <small class="text-muted">Previsão: 28/09/2026</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RECURSOS ==================== -->
+    <section id="recursos" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-badge">Recursos</span>
+          <h2 class="section-title">Tudo o que você precisa</h2>
+          <p class="section-subtitle text-muted mx-auto">Funcionalidades pensadas para simplificar o acompanhamento das suas encomendas.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3">
+                  <i class="bi bi-collection"></i>
+                </div>
+                <h5 class="card-title">Rastreamento centralizado</h5>
+                <p class="card-text text-muted">Acompanhe diferentes encomendas de várias transportadoras em um único painel organizado.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3">
+                  <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <h5 class="card-title">Atualizações automáticas</h5>
+                <p class="card-text text-muted">Receba informações em tempo real sobre qualquer mudança no trajeto da sua encomenda.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <h5 class="card-title">Histórico de pedidos</h5>
+                <p class="card-text text-muted">Consulte o histórico completo das suas encomendas anteriores sempre que precisar.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3">
+                  <i class="bi bi-phone"></i>
+                </div>
+                <h5 class="card-title">Interface inteligente</h5>
+                <p class="card-text text-muted">Visualize rapidamente o status de cada pedido com uma interface limpa e intuitiva.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3">
+                  <i class="bi bi-bell-fill"></i>
+                </div>
+                <h5 class="card-title">Alertas inteligentes</h5>
+                <p class="card-text text-muted">Saiba imediatamente quando sua encomenda mudar de etapa ou estiver próxima da entrega.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h5 class="card-title">Experiência multiplataforma</h5>
+                <p class="card-text text-muted">Acesse suas informações de qualquer dispositivo — celular, tablet ou computador.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CAROUSEL ==================== -->
+    <section id="por-que" class="section-padding bg-primary-gradient">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-badge section-badge-light">Destaques</span>
+          <h2 class="section-title text-white">Por que usar o TrackParcel?</h2>
+        </div>
+
+        <div id="whyCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#whyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#whyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#whyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#whyCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-content text-center px-4">
+                <div class="carousel-icon mb-3">
+                  <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h3 class="text-white mb-3">Rastreamento simples</h3>
+                <p class="text-white-50 mx-auto" style="max-width: 500px;">
+                  Digite o código e pronto. Sem cadastros complicados, sem múltiplas abas abertas. Tudo em um só lugar.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content text-center px-4">
+                <div class="carousel-icon mb-3">
+                  <i class="bi bi-grid-3x3-gap"></i>
+                </div>
+                <h3 class="text-white mb-3">Organização das encomendas</h3>
+                <p class="text-white-50 mx-auto" style="max-width: 500px;">
+                  Gerencie todos os seus pedidos em um painel centralizado. Nunca mais perca o rastro de uma entrega.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content text-center px-4">
+                <div class="carousel-icon mb-3">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <h3 class="text-white mb-3">Atualizações rápidas</h3>
+                <p class="text-white-50 mx-auto" style="max-width: 500px;">
+                  Status atualizado em tempo quase real. Saiba exatamente onde está sua encomenda a qualquer momento.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content text-center px-4">
+                <div class="carousel-icon mb-3">
+                  <i class="bi bi-emoji-smile"></i>
+                </div>
+                <h3 class="text-white mb-3">Experiência intuitiva</h3>
+                <p class="text-white-50 mx-auto" style="max-width: 500px;">
+                  Interface limpa e moderna, pensada para qualquer pessoa usar sem dificuldade. Tecnologia a serviço da simplicidade.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#whyCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#whyCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ESTATÍSTICAS ==================== -->
+    <section id="estatisticas" class="section-padding">
+      <div class="container">
+        <!-- Nota: números demonstrativos para fins acadêmicos -->
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="stat-value">+10 mil</div>
+              <div class="stat-desc">encomendas monitoradas*</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="stat-value">98%</div>
+              <div class="stat-desc">atualizações processadas*</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="stat-value">24/7</div>
+              <div class="stat-desc">acompanhamento*</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="stat-value">+50</div>
+              <div class="stat-desc">transportadoras integráveis*</div>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-muted small mt-4 mb-0">
+          * Números demonstrativos para fins acadêmicos. Não representam dados reais de operação.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ (ACCORDION) ==================== -->
+    <section id="faq" class="section-padding bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-badge">FAQ</span>
+          <h2 class="section-title">Perguntas frequentes</h2>
+          <p class="section-subtitle text-muted mx-auto">Tire suas dúvidas sobre o TrackParcel.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item border-0 shadow-sm mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    O TrackParcel funciona com qualquer transportadora?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    O TrackParcel foi projetado para integrar as principais transportadoras do Brasil, incluindo Correios, Jadlog, Total Express, Loggi e outras. A lista de transportadoras suportadas continua em expansão.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 shadow-sm mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    Preciso criar uma conta para rastrear?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Não. Você pode rastrear encomendas sem criar uma conta. Basta informar o código de rastreamento. Uma conta opcional permite salvar o histórico e receber alertas.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 shadow-sm mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    Posso acompanhar várias encomendas?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Sim. O TrackParcel permite monitorar múltiplas encomendas simultaneamente em um único painel, facilitando a organização de todos os seus pedidos.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 shadow-sm mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    O TrackParcel envia notificações?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Sim. Com uma conta, você pode ativar alertas por e-mail ou no navegador para ser notificado quando houver mudança de status na sua encomenda.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 shadow-sm mb-3 rounded overflow-hidden">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                    Meus dados ficam seguros?
+                  </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Sim. O TrackParcel prioriza a privacidade. Códigos de rastreamento são processados de forma segura e nenhum dado sensível é armazenado sem o seu consentimento.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="d-flex align-items-center mb-3">
+            <img src="assets/logo-icon.png" alt="TrackParcel Logo" width="40" height="40" class="me-2">
+            <span class="fs-5 fw-bold">Track<span class="text-info">Parcel</span></span>
+          </div>
+          <p class="text-white-50 mb-2">Seu pedido. Seu controle.</p>
+          <p class="text-white-50 small">
+            Aplicativo de rastreamento de encomendas que centraliza o acompanhamento de pedidos de diferentes transportadoras em um só lugar.
+          </p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6 class="text-uppercase small fw-semibold mb-3">Navegação</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#inicio" class="footer-link">Início</a></li>
+            <li class="mb-2"><a href="#rastreamento" class="footer-link">Rastreamento</a></li>
+            <li class="mb-2"><a href="#recursos" class="footer-link">Recursos</a></li>
+            <li class="mb-2"><a href="#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h6 class="text-uppercase small fw-semibold mb-3">Sobre</h6>
+          <p class="text-white-50 small mb-0">
+            Projeto acadêmico desenvolvido para a <strong>Atividade 2 - Estado da Arte</strong>.
+          </p>
+          <p class="text-white-50 small mt-2 mb-0">
+            Demonstração visual de um produto digital de rastreamento de encomendas utilizando Bootstrap 5.
+          </p>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <p class="text-white-50 small mb-0">
+          &copy; 2026 TrackParcel — Projeto acadêmico. Todos os direitos reservados para fins educacionais.
+        </p>
+        <p class="text-white-50 small mb-0">
+          Feito com <i class="bi bi-heart-fill text-danger"></i> e Bootstrap 5
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL - Resultado do Rastreamento ==================== -->
+  <div class="modal fade" id="trackingModal" tabindex="-1" aria-labelledby="trackingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-semibold" id="trackingModalLabel">
+            <i class="bi bi-box-seam text-primary me-2"></i>Resultado do rastreamento
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body pt-3">
+          <div class="tracking-result">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary-subtle text-primary-emphasis fs-6" id="modalCode">TRK20260925</span>
+              <span class="badge bg-warning-subtle text-warning-emphasis" id="modalStatus">
+                <i class="bi bi-truck me-1"></i>Em trânsito
+              </span>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <small class="text-muted">Progresso</small>
+                <small class="fw-semibold text-primary" id="modalProgressText">65%</small>
+              </div>
+              <div class="progress" style="height: 8px;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" id="modalProgressBar" style="width: 65%"></div>
+              </div>
+            </div>
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between px-0">
+                <span class="text-muted">Localização atual</span>
+                <span class="fw-medium" id="modalLocation">São Paulo - SP</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between px-0">
+                <span class="text-muted">Próxima etapa</span>
+                <span class="fw-medium" id="modalNext">Centro de distribuição</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between px-0">
+                <span class="text-muted">Previsão de entrega</span>
+                <span class="fw-medium" id="modalEta">28/09/2026</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-track" data-bs-dismiss="modal">
+            <i class="bi bi-check2 me-1"></i>Entendi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST ==================== -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+    <div id="trackingToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-check-circle-fill me-2"></i>
+          <span id="toastMessage">Rastreamento iniciado!</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Fechar"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
